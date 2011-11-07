@@ -1,0 +1,42 @@
+[submodule "snippets"]
+	path = snippets
+	url = git@github.com:lammermann/snipmate-snippets.git
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = git://github.com/vim-scripts/Gundo.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/screentmux"]
+	path = bundle/screentmux
+	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
+[submodule "bundle/snipMate"]
+	path = bundle/snipMate
+	url = git://github.com/vim-scripts/snipMate.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/vim-scripts/fugitive.vim.git
+[submodule "bundle/AutoComplPop"]
+	path = bundle/AutoComplPop
+	url = git://github.com/vim-scripts/AutoComplPop.git
+[submodule "bundle/Align"]
+	path = bundle/Align
+	url = git://github.com/vim-scripts/Align.git
+[submodule "bundle/CCTree"]
+	path = bundle/CCTree
+	url = git://github.com/vim-scripts/CCTree.git
+[submodule "bundle/DoxygenToolkit"]
+	path = bundle/DoxygenToolkit
+	url = git://github.com/vim-scripts/DoxygenToolkit.vim.git
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = git://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/lua_omni"]
+	path = bundle/lua_omni
+	url = git://github.com/vim-scripts/lua_omni.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/vim-afterimage"]
+	path = bundle/vim-afterimage
+	url = git://github.com/tpope/vim-afterimage.git

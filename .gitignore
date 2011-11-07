@@ -1,0 +1,8 @@
+.svn
+CVS
+
+.#*
+*~
+.*.swp
+
+/tags/sysctags

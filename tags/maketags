@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Creates the global taglist
+
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f sysctags /usr/include
