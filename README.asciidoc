@@ -5,20 +5,24 @@ To use this settings in vim follow the instructions.
 
 Installation
 ------------
-Clone the repository into '~/.vim/' on unix and into '~/_vimfiles' os windows.
+Clone the repository into `~/.vim/` on unix and into `~/_vimfiles` os windows.
 
-Create symbolic links so that '~/.vimrc' points to the '~/.vim/vimrc' file:
+Create symbolic links so that `~/.vimrc` points to the `~/.vim/vimrc` file:
 
 [source,sh]
+--------------------------------------------------------------------------------
 $ ln -s ~/.vim/vimrc ~/.vimrc
 $ ln -s ~/.vim/vimrc ~/.gvimrc
+--------------------------------------------------------------------------------
 
 Synchronize
 -----------
 To keep the repository synchronized on different systems type:
 
 [source,sh]
+--------------------------------------------------------------------------------
 $ git pull origin master
 $ 
 $ git submodule init
 $ git submodule update
+--------------------------------------------------------------------------------
