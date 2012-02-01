@@ -71,5 +71,9 @@ endif
 set ttymouse=xterm
 set mouse=a
 
+" set encoding to utf-8
+" this is needed on windows
+set encoding=utf-8
+
 " source persian functions
 source $HOME/.vim/persian.vim

@@ -31,12 +31,18 @@
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
-[submodule "bundle/lua_omni"]
-	path = bundle/lua_omni
-	url = git://github.com/vim-scripts/lua_omni.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
 [submodule "bundle/vim-afterimage"]
 	path = bundle/vim-afterimage
 	url = git://github.com/tpope/vim-afterimage.git
+[submodule "bundle/gnupg"]
+	path = bundle/gnupg
+	url = git://github.com/vim-scripts/gnupg.vim.git
+[submodule "vimtodo"]
+	path = vimtodo
+	url = git://github.com/mivok/vimtodo.git
+[submodule "bundle/vimtodo"]
+	path = bundle/vimtodo
+	url = git://github.com/mivok/vimtodo.git
