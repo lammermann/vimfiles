@@ -12,7 +12,7 @@
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
 [submodule "bundle/snipMate"]
 	path = bundle/snipMate
-	url = git://github.com/vim-scripts/snipMate.git
+	url = git://github.com/lammermann/vim-snipmate.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/vim-scripts/fugitive.vim.git
@@ -52,3 +52,9 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
