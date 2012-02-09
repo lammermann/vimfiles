@@ -37,14 +37,21 @@ set showcmd
 set whichwrap=b,s,h,l
 " use the clipboard
 "set clipboard=unnamed
+
+"===============================================================================
+" Plugin Configuration
+"===============================================================================
+
 " only use my own snippets
 let g:snippets_dir = '~/.vim/snippets/'
 let g:snips_author = 'Benjamin Kober'
-"imap <C-X><C-S> <C-R>=ShowAvailableSnips()<CR>
 " put outline-window on the right side
 let g:Tlist_Use_Right_Window = 1
 " use tmux instead of screen
 let g:ScreenImpl = 'Tmux'
+" store the yankring in /tmp/
+let g:yankring_history_dir = '/tmp/'
+
 " command for writing a file with sudo-rights
 command! W w !sudo tee % >/dev/null
 

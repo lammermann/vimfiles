@@ -49,3 +49,6 @@
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = git://github.com/vim-scripts/YankRing.vim.git
