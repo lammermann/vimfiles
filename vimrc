@@ -68,12 +68,12 @@ let g:Tlist_Use_Right_Window = 1
 let g:ScreenImpl = 'Tmux'
 " store the yankring in /tmp/
 let g:yankring_history_dir = '/tmp/'
-" enable vim-acp for snippets
-"let g:acp_behaviorSnipmateLength = 1
 " preview completion
 let g:acp_completeoptPreview = 1
 " make completion case sensitive
 let g:acp_ignorecaseOption = 0
+" enable vim-acp for snippets
+let g:acp_behaviorSnipmateLength = 1
 
 " }}}
 "===============================================================================
@@ -88,7 +88,9 @@ command! W w !sudo tee % >/dev/null
 
 " adaption for python PEP 8
 au! FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+" completion
 au! FileType python set omnifunc=pythoncomplete#Complete
+au! FileType xml set omnifunc=xmlcomplete#CompleteTags
 " detect csv files
 au! BufRead,BufNewFile *.csv setfiletype csv
 

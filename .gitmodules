@@ -58,3 +58,9 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/xml-completion"]
+	path = bundle/xml-completion
+	url = https://github.com/vim-scripts/XML-Completion.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = https://github.com/sukima/xmledit.git
