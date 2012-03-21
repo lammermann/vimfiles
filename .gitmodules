@@ -10,9 +10,6 @@
 [submodule "bundle/screentmux"]
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
-[submodule "bundle/snipMate"]
-	path = bundle/snipMate
-	url = git://github.com/lammermann/vim-snipmate.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/vim-scripts/fugitive.vim.git
@@ -52,15 +49,15 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = git://github.com/vim-scripts/YankRing.vim.git
-[submodule "bundle/tlib_vim"]
-	path = bundle/tlib_vim
-	url = git://github.com/tomtom/tlib_vim.git
-[submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/xml-completion"]
 	path = bundle/xml-completion
 	url = https://github.com/vim-scripts/XML-Completion.git
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
+[submodule "bundle/vim-ipython"]
+	path = bundle/vim-ipython
+	url = git@github.com:lammermann/vim-ipython.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:lammermann/ultisnips.git

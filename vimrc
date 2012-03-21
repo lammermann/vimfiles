@@ -60,8 +60,14 @@ set encoding=utf-8
 " Plugin Configuration {{{
 
 " only use my own snippets
-let g:snippets_dir = '~/.vim/snippets/'
+let g:UltiSnipsSnippetDirectories = [$HOME . "/.vim/snippets/"]
+let g:UltiSnipsSnippetsDir = $HOME . '/.vim/snippets/'
+let g:UltiSnipsEditSplit = 'vertical'
 let g:snips_author = 'Benjamin Kober'
+" simulate TextMate behavior
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " put outline-window on the right side
 let g:Tlist_Use_Right_Window = 1
 " use tmux instead of screen
@@ -73,7 +79,7 @@ let g:acp_completeoptPreview = 1
 " make completion case sensitive
 let g:acp_ignorecaseOption = 0
 " enable vim-acp for snippets
-let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorSnipmateLength = -1
 
 " }}}
 "===============================================================================
