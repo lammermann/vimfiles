@@ -51,6 +51,8 @@ set tags+=~/.vim/tags/sysctags
 " configuring mouse usage
 set ttymouse=xterm
 set mouse=a
+" better usage of colors
+set t_Co=256
 " set encoding to utf-8
 " this is needed on windows
 set encoding=utf-8
