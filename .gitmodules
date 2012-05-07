@@ -4,15 +4,9 @@
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = git://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/screentmux"]
 	path = bundle/screentmux
 	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
-	url = git://github.com/vim-scripts/fugitive.vim.git
 [submodule "bundle/AutoComplPop"]
 	path = bundle/AutoComplPop
 	url = git://github.com/vim-scripts/AutoComplPop.git
@@ -58,3 +52,9 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:lammermann/ultisnips.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

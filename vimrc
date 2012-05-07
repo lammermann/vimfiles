@@ -70,14 +70,12 @@ let g:snips_author = 'Benjamin Kober'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" put outline-window on the right side
-let g:Tlist_Use_Right_Window = 1
+" sort tags in tagbar by order in the source file
+let g:tagbar_sort = 0
 " use tmux instead of screen
 let g:ScreenImpl = 'Tmux'
 " store the yankring in /tmp/
 let g:yankring_history_dir = '/tmp/'
-" preview completion
-let g:acp_completeoptPreview = 1
 " make completion case sensitive
 let g:acp_ignorecaseOption = 0
 " enable vim-acp for snippets
