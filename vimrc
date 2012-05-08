@@ -80,6 +80,8 @@ let g:yankring_history_dir = '/tmp/'
 let g:acp_ignorecaseOption = 0
 " enable vim-acp for snippets
 let g:acp_behaviorSnipmateLength = -1
+" set environment to english for fugitive
+let $LANG = 'en_US.UTF-8'
 
 " }}}
 "===============================================================================
