@@ -89,6 +89,8 @@ let $LANG = 'en_US.UTF-8'
 
 " command for writing a file with sudo rights
 command! W w !sudo tee % >/dev/null
+" alias TagbarToggle to the shorter Tbar
+command! Tbar TagbarToggle
 
 " }}}
 "===============================================================================
