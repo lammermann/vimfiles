@@ -103,6 +103,8 @@ au! FileType python set omnifunc=pythoncomplete#Complete
 au! FileType xml set omnifunc=xmlcomplete#CompleteTags
 " detect csv files
 au! BufRead,BufNewFile *.csv setfiletype csv
+" always place the quickfix window on the bottom
+au! FileType qf wincmd J
 
 " }}}
 "===============================================================================
