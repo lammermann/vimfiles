@@ -86,6 +86,12 @@ let g:acp_ignorecaseOption = 0
 let g:acp_behaviorSnipmateLength = -1
 " set environment to english for fugitive
 let $LANG = 'en_US.UTF-8'
+" allow using the <C-w> to leave ConqueTerm
+let g:ConqueTerm_CWInsert = 1
+" switch to insert mode when entering a ConqueTerm
+let g:ConqueTerm_InsertOnEnter = 1
+" delete buffer after closing the ConqueTerm shellcmd
+let g:ConqueTerm_CloseOnEnd = 1
 
 " }}}
 "===============================================================================
