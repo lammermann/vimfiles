@@ -72,6 +72,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " sort tags in tagbar by order in the source file
 let g:tagbar_sort = 0
+let g:tagbar_expand = 1
+let g:tagbar_width = 30
 " use tmux instead of screen
 let g:ScreenImpl = 'Tmux'
 " don't close tmux buffers on exit
