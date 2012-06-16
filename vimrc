@@ -74,6 +74,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:tagbar_sort = 0
 " use tmux instead of screen
 let g:ScreenImpl = 'Tmux'
+" don't close tmux buffers on exit
+let g:ScreenShellQuitOnVimExit = 0
 " store the yankring in /tmp/
 let g:yankring_history_dir = '/tmp/'
 " make completion case sensitive

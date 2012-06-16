@@ -6,7 +6,7 @@
 	url = git://github.com/vim-scripts/Gundo.git
 [submodule "bundle/screentmux"]
 	path = bundle/screentmux
-	url = git://github.com/vim-scripts/Screen-vim---gnu-screentmux.git
+	url = https://github.com/ervandew/screen.git
 [submodule "bundle/AutoComplPop"]
 	path = bundle/AutoComplPop
 	url = git://github.com/vim-scripts/AutoComplPop.git
@@ -46,9 +46,6 @@
 [submodule "bundle/xmledit"]
 	path = bundle/xmledit
 	url = https://github.com/sukima/xmledit.git
-[submodule "bundle/vim-ipython"]
-	path = bundle/vim-ipython
-	url = git@github.com:lammermann/vim-ipython.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:lammermann/ultisnips.git
@@ -58,3 +55,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/conqueshell"]
+	path = bundle/conqueshell
+	url = https://github.com/rson/vim-conque.git
