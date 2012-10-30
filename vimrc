@@ -117,7 +117,8 @@ au! FileType lua set shiftwidth=2 tabstop=2 softtabstop=2
 au! BufRead,BufNewFile *.csv setfiletype csv
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
-
+" disable acp-Plugin on conqueterm
+autocmd WinEnter * :if &ft=='conque_term' | AcpDisable | else | AcpEnable | endif
 " }}}
 "===============================================================================
 " Miscellaneous {{{
