@@ -111,11 +111,14 @@ au! FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 " completion
 au! FileType python set omnifunc=pythoncomplete#Complete
 au! FileType xml set omnifunc=xmlcomplete#CompleteTags
+" just two spaces for lua
+au! FileType lua set shiftwidth=2 tabstop=2 softtabstop=2
 " detect csv files
 au! BufRead,BufNewFile *.csv setfiletype csv
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
-
+" disable acp-Plugin on conqueterm
+autocmd WinEnter * :if &ft=='conque_term' | AcpDisable | else | AcpEnable | endif
 " }}}
 "===============================================================================
 " Miscellaneous {{{
