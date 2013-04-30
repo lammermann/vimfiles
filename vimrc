@@ -106,6 +106,9 @@ command! Tbar TagbarToggle
 "===============================================================================
 " Autocommands {{{
 
+
+" automatically reload vimrc when it's saved
+au! BufWritePost ~/.vim/vimrc so ~/.vim/vimrc
 " adaption for python PEP 8
 au! FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 " completion
@@ -118,7 +121,9 @@ au! BufRead,BufNewFile *.csv setfiletype csv
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
 " disable acp-Plugin on conqueterm
-autocmd WinEnter * :if &ft=='conque_term' | AcpDisable | else | AcpEnable | endif
+au! WinEnter * :if &ft=='conque_term' | AcpDisable | else | AcpEnable | endif
+" set fix window height on conqueterm
+au! BufNew * :if &ft=='conque_term' | set wfh | endif
 " }}}
 "===============================================================================
 " Miscellaneous {{{
