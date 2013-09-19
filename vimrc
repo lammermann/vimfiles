@@ -56,6 +56,9 @@ set t_Co=256
 " set encoding to utf-8
 " this is needed on windows
 set encoding=utf-8
+" set statusline with git informations
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
 
 " }}}
 "===============================================================================
