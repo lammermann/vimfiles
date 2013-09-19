@@ -116,6 +116,8 @@ au! FileType python set omnifunc=pythoncomplete#Complete
 au! FileType xml set omnifunc=xmlcomplete#CompleteTags
 " just two spaces for lua
 au! FileType lua set shiftwidth=2 tabstop=2 softtabstop=2
+" just two spaces for html
+au! FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 " detect csv files
 au! BufRead,BufNewFile *.csv setfiletype csv
 " always place the quickfix window on the bottom
