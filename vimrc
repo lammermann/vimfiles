@@ -33,7 +33,7 @@ set autoindent
 set virtualedit=block
 " use spaces instead of tabs
 set expandtab
-set shiftwidth=4 tabstop=4 softtabstop=4
+set shiftwidth=2 tabstop=2 softtabstop=2
 " begin search while typing
 set incsearch
 " mark all matched words
@@ -53,6 +53,8 @@ set ttymouse=xterm
 set mouse=a
 " better usage of colors
 set t_Co=256
+" better colorscheme for diffs
+"colorscheme softblue
 " set encoding to utf-8
 " this is needed on windows
 set encoding=utf-8
