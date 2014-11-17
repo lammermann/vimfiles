@@ -125,6 +125,8 @@ au! FileType lua set shiftwidth=2 tabstop=2 softtabstop=2
 au! FileType html setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 " detect csv files
 au! BufRead,BufNewFile *.csv setfiletype csv
+" detect qml files
+au! BufRead,BufNewFile *.qml setfiletype javascript
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
 " disable acp-Plugin on conqueterm
