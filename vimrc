@@ -2,10 +2,29 @@
 "
 " Vim Configuration File
 "===============================================================================
-" Use pathogen for Plugin Management {{{
+" Use Vundle for Plugin Management {{{
 
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'vim-scipts/Align'
+Plugin 'SirVer/ultisnips'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'majutsushi/tagbar'
+Plugin 'jamessan/vim-gnupg'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 " }}}
 "===============================================================================
@@ -75,6 +94,7 @@ let g:snips_author = 'Benjamin Kober'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:ycm_key_list_select_completion = ['<ENTER>', '<TAB>', '<Down>']
 " sort tags in tagbar by order in the source file
 let g:tagbar_sort = 0
 let g:tagbar_expand = 1
