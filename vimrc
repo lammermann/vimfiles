@@ -22,6 +22,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'jamessan/vim-gnupg'
+Plugin 'sjl/gundo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,6 +96,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:ycm_key_list_select_completion = ['<ENTER>', '<TAB>', '<Down>']
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_filetype_blacklist = {}
 " sort tags in tagbar by order in the source file
 let g:tagbar_sort = 0
 let g:tagbar_expand = 1
