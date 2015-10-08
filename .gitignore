@@ -5,4 +5,5 @@ CVS
 *~
 .*.swp
 
+.netrwhist
 /tags/sysctags

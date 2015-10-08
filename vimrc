@@ -15,14 +15,20 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'othree/vim-autocomplpop'
+Plugin 'eparreno/vim-l9'
 Plugin 'chrisbra/NrrwRgn'
-Plugin 'vim-scipts/Align'
+"Plugin 'vim-scipts/Align'
 Plugin 'SirVer/ultisnips'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'sjl/gundo.vim'
+Plugin 'skwp/greplace.vim'
+Plugin 'hari-rangarajan/CCTree'
+Plugin 'tmhedberg/matchit'
+Plugin 'benekastah/neomake'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -31,8 +37,6 @@ call vundle#end()            " required
 "===============================================================================
 " Options {{{
 
-" Use Vim defaults instead of 100% vi compatibility
-set nocompatible
 " enable syntax-highlighting
 syntax enable
 " more powerful backspacing
@@ -66,13 +70,18 @@ set showcmd
 set whichwrap=b,s,h,l
 " use the clipboard
 "set clipboard=unnamed
+set complete +=i
 " improve auto completion
 set tags+=~/.vim/tags/sysctags
-" configuring mouse usage
-set ttymouse=xterm
-set mouse=a
-" better usage of colors
-set t_Co=256
+if !has('nvim')
+  " Use Vim defaults instead of 100% vi compatibility
+  set nocompatible
+  " configuring mouse usage
+  set ttymouse=xterm
+  set mouse=a
+  " better usage of colors
+  set t_Co=256
+endif
 " better colorscheme for diffs
 "colorscheme softblue
 " set encoding to utf-8
@@ -82,6 +91,8 @@ set encoding=utf-8
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
+"use ESC to leave terminal mode
+tnoremap <Esc> <C-\><C-n>
 " }}}
 "===============================================================================
 " Plugin Configuration {{{
@@ -114,12 +125,6 @@ let g:acp_ignorecaseOption = 0
 let g:acp_behaviorSnipmateLength = -1
 " set environment to english for fugitive
 let $LANG = 'en_US.UTF-8'
-" allow using the <C-w> to leave ConqueTerm
-let g:ConqueTerm_CWInsert = 1
-" switch to insert mode when entering a ConqueTerm
-let g:ConqueTerm_InsertOnEnter = 1
-" delete buffer after closing the ConqueTerm shellcmd
-let g:ConqueTerm_CloseOnEnd = 1
 
 " }}}
 "===============================================================================
@@ -152,10 +157,6 @@ au! BufRead,BufNewFile *.csv setfiletype csv
 au! BufRead,BufNewFile *.qml setfiletype javascript
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
-" disable acp-Plugin on conqueterm
-au! WinEnter * :if &ft=='conque_term' | AcpDisable | else | AcpEnable | endif
-" set fix window height on conqueterm
-au! BufNew * :if &ft=='conque_term' | set wfh | endif
 " }}}
 "===============================================================================
 " Miscellaneous {{{
