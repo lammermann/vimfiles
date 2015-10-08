@@ -1,30 +1,15 @@
 [submodule "snippets"]
 	path = snippets
     url = git://github.com/lammermann/snipmate-snippets.git
-[submodule "bundle/screentmux"]
-	path = bundle/screentmux
-	url = https://github.com/ervandew/screen.git
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = git://github.com/vim-scripts/Align.git
 [submodule "bundle/CCTree"]
 	path = bundle/CCTree
 	url = git://github.com/vim-scripts/CCTree.git
-[submodule "bundle/DoxygenToolkit"]
-	path = bundle/DoxygenToolkit
-	url = git://github.com/vim-scripts/DoxygenToolkit.vim.git
-[submodule "bundle/OmniCppComplete"]
-	path = bundle/OmniCppComplete
-	url = git://github.com/vim-scripts/OmniCppComplete.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/vim-afterimage"]
-	path = bundle/vim-afterimage
-	url = git://github.com/tpope/vim-afterimage.git
-[submodule "bundle/vimtodo"]
-	path = bundle/vimtodo
-	url = git://github.com/mivok/vimtodo.git
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
@@ -34,18 +19,12 @@
 [submodule "bundle/xml-completion"]
 	path = bundle/xml-completion
 	url = https://github.com/vim-scripts/XML-Completion.git
-[submodule "bundle/xmledit"]
-	path = bundle/xmledit
-	url = https://github.com/sukima/xmledit.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:lammermann/ultisnips.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "bundle/conqueshell"]
-	path = bundle/conqueshell
-	url = https://github.com/rson/vim-conque.git
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
