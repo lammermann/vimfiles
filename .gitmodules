@@ -1,9 +1,6 @@
 [submodule "snippets"]
 	path = snippets
     url = git://github.com/lammermann/snipmate-snippets.git
-[submodule "bundle/Align"]
-	path = bundle/Align
-	url = git://github.com/vim-scripts/Align.git
 [submodule "bundle/CCTree"]
 	path = bundle/CCTree
 	url = git://github.com/vim-scripts/CCTree.git
