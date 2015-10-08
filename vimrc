@@ -20,6 +20,7 @@ Plugin 'othree/vim-autocomplpop'
 Plugin 'eparreno/vim-l9'
 Plugin 'chrisbra/NrrwRgn'
 "Plugin 'vim-scipts/Align'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'SirVer/ultisnips'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'majutsushi/tagbar'
@@ -29,10 +30,10 @@ Plugin 'skwp/greplace.vim'
 Plugin 'hari-rangarajan/CCTree'
 Plugin 'tmhedberg/matchit'
 Plugin 'benekastah/neomake'
+"Plugin 'vim-scripts/YankRing'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-
 " }}}
 "===============================================================================
 " Options {{{
@@ -92,20 +93,26 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
 "use ESC to leave terminal mode
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-Esc> <C-\><C-n>
+"navigate in terminal mode
+tnoremap <C-w>h <C-\><C-n><C-w>h
+tnoremap <C-w>j <C-\><C-n><C-w>j
+tnoremap <C-w>k <C-\><C-n><C-w>k
+tnoremap <C-w>l <C-\><C-n><C-w>l
 " }}}
 "===============================================================================
 " Plugin Configuration {{{
 
 " only use my own snippets
-let g:UltiSnipsSnippetDirectories = [$HOME . "/.vim/snippets/"]
-let g:UltiSnipsSnippetsDir = $HOME . '/.vim/snippets/'
+let g:UltiSnipsSnippetDirectories = [$HOME . "/.vim/UltiSnips"]
+let g:UltiSnipsSnippetsDir = $HOME . '/.vim/UltiSnips/'
 let g:UltiSnipsEditSplit = 'vertical'
 let g:snips_author = 'Benjamin Kober'
 " simulate TextMate behavior
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsNoPythonWarning = 1
 let g:ycm_key_list_select_completion = ['<ENTER>', '<TAB>', '<Down>']
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_filetype_blacklist = {}
