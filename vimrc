@@ -167,6 +167,17 @@ au! BufRead,BufNewFile *.csv setfiletype csv
 au! BufRead,BufNewFile *.qml setfiletype javascript
 " always place the quickfix window on the bottom
 au! FileType qf wincmd J
+" remove whitespace on saving and use unix format
+fun! StripTrailingWhitespace()
+  "let l:fts = ["c","cpp","lua","python","markdown","vim"]
+  "if index(l:fts, &ft) == -1
+    let l:save_cursor = getpos('.')
+    %s/\s\+$//e
+    "set ff=unix
+    call setpos('.', l:save_cursor)
+  "end
+endfun
+au! BufWritePre * :call StripTrailingWhitespace()
 " }}}
 "===============================================================================
 " Miscellaneous {{{
