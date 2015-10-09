@@ -15,8 +15,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'othree/vim-autocomplpop'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'othree/vim-autocomplpop'
 Plugin 'eparreno/vim-l9'
 Plugin 'chrisbra/NrrwRgn'
 "Plugin 'vim-scipts/Align'
@@ -113,7 +113,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsNoPythonWarning = 1
-let g:ycm_key_list_select_completion = ['<ENTER>', '<TAB>', '<Down>']
+let g:ycm_key_list_select_completion = ['<ENTER>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_auto_trigger = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ycm_filetype_blacklist = {}
 " sort tags in tagbar by order in the source file

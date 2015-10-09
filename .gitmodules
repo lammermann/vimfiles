@@ -1,5 +1,5 @@
 [submodule "snippets"]
-	path = UltiSnipps
+	path = UltiSnips
     url = git://github.com/lammermann/snipmate-snippets.git
 [submodule "bundle/CCTree"]
 	path = bundle/CCTree
