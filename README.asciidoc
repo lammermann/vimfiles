@@ -7,16 +7,16 @@ Installation
 ------------
 Clone the repository into `~/.vim/` on unix and into `~/_vimfiles` os windows.
 
-Create symbolic links so that `~/.vimrc` points to the `~/.vim/vimrc` file:
+Create symbolic links so that `~/.vimrc` points to the `~/.vim/init.vim` file:
 
-    $ ln -s ~/.vim/vimrc ~/.vimrc
-    $ ln -s ~/.vim/vimrc ~/.gvimrc
+    $ ln -s ~/.vim/init.vim ~/.vimrc
+    $ ln -s ~/.vim/init.vim ~/.gvimrc
 
 Synchronize
 -----------
 To keep the repository synchronized on different systems type:
 
     $ git pull origin master
-    $ 
+    $
     $ git submodule init
     $ git submodule update
