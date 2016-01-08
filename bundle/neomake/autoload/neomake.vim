@@ -67,7 +67,7 @@ function! neomake#MakeJob(maker) abort
     let jobinfo.maker = a:maker
 
     let args = a:maker.args
-    let append_file = a:maker.file_mode && index(args, '%:p') <= 0
+    let append_file = a:maker.file_mode && index(args, '%:p') <= 0 && get(a:maker, 'append_file', 1)
     if append_file
         call add(args, '%:p')
     endif
@@ -158,14 +158,16 @@ function! neomake#GetMaker(name_or_maker, ...) abort
         if len(fts)
             for ft in fts
                 let config_var = 'neomake_'.ft.'_'.maker.name.'_'.key
-                if has_key(g:, config_var)
+                if has_key(g:, config_var) || has_key(b:, config_var)
                     break
                 endif
             endfor
         else
             let config_var = 'neomake_'.maker.name.'_'.key
         endif
-        if has_key(g:, config_var)
+        if has_key(b:, config_var)
+            let maker[key] = copy(get(b:, config_var))
+        elseif has_key(g:, config_var)
             let maker[key] = copy(get(g:, config_var))
         elseif !has_key(maker, key)
             let maker[key] = defaults[key]
@@ -443,7 +445,10 @@ function! neomake#MakeHandler(job_id, data, event_type) abort
         let last_event_type = get(jobinfo, 'event_type', a:event_type)
         let jobinfo.event_type = a:event_type
         if has_key(jobinfo, 'lines')
-            call extend(jobinfo.lines, lines)
+            " As per https://github.com/neovim/neovim/issues/3555
+            let jobinfo.lines = jobinfo.lines[:-2]
+                        \ + [jobinfo.lines[-1] . get(lines, 0, '')]
+                        \ + lines[1:]
         else
             let jobinfo.lines = lines
         endif

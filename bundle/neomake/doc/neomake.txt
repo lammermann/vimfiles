@@ -104,6 +104,18 @@ but will be retained in the docs for discoverability: >
 This will cause "lint /path/to/file.c --option x" to be run instead of
 "lint --option x /path/to/file.c".
 
+The file path can be excluded from the argument list entirely by setting the
+'append_file' argument to 0. >
+    let g:neomake_c_lint_maker = {
+        \ 'exe': 'lint',
+        \ 'args': ['--option', 'x'],
+        \ 'append_file': 0,
+        \ 'errorformat': '%f:%l:%c: %m',
+        \ }
+<
+This can be useful for makers that are filetype dependent but are typically
+run on an whole project rather than a specific file.
+
                                                      *neomake-makers-processing*
 You can define two optional properties on a maker object to process the maker
 output: 'mapexpr' is applied to the maker output before any processing, and
@@ -165,8 +177,9 @@ Define a new filetype or project-level maker. See |neomake-makers|.
 
 *g:neomake_<name>_<property>* *g:neomake_<ft>_<name>_<property>*
 Configure a property for a prexisting maker where property is one of 'exe',
-'args', 'errorformat' or 'buffer_output'. Example: >
+'args', 'errorformat' or 'buffer_output'. Can also be set by buffer. Example: >
     let g:neomake_javascript_jshint_exe = './myjshint'
+    let b:neomake_javascript_jshint_exe = './myotherjshint'
 <
 *g:neomake_<ft>_enabled_makers*
 This setting will tell neomake which makers to use by default for the given

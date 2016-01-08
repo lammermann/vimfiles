@@ -30,6 +30,7 @@ Plugin 'skwp/greplace.vim'
 Plugin 'hari-rangarajan/CCTree'
 Plugin 'tmhedberg/matchit'
 Plugin 'benekastah/neomake'
+Plugin 'Mizuchi/vim-ranger.git'
 "Plugin 'vim-scripts/YankRing'
 
 " All of your Plugins must be added before the following line

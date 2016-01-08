@@ -41,11 +41,13 @@ Taking a page from the book of syntastic, you can configure "makers" (called
 "checkers" in syntastic) for different filetypes. Here is an example
 configuration:
 
-    let g:neomake_javascript_jshint_maker = {
-        \ 'args': ['--verbose'],
-        \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-        \ }
-    let g:neomake_javascript_enabled_makers = ['jshint']
+```viml
+let g:neomake_javascript_jshint_maker = {
+    \ 'args': ['--verbose'],
+    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+    \ }
+let g:neomake_javascript_enabled_makers = ['jshint']
+```
 
 For use with the `:Neomake` command (makers that run on an individual file), it
 is critical that makers follow this naming convention:
@@ -59,9 +61,10 @@ will get an error message like `{ makername } not found`.
 
 If the string `'%:p'` shows up anywhere in the `'args'` list, it will be
 `expand()`ed to the full path of the current file in place. Otherwise, the full
-path to the file will be `add()`ed to the end of the list. You can customize
-the program that is called by adding an `'exe'` property which should be a
-string (defaults to the name of the maker).
+path to the file will be `add()`ed to the end of the list, unless the maker's
+`'append_file'` option is set to 0. You can customize the program that is
+called by adding an `'exe'` property which should be a string (defaults to the
+name of the maker).
 
 Once you have created your makers, run `:Neomake` as normal. Run
 `:Neomake <checker-name>` to run only a single checker. Configuring a
@@ -76,6 +79,7 @@ Coffeescript:
 Go:
 - go
 - golint
+- go vet
 
 Haskell:
 - hlint
@@ -109,23 +113,25 @@ Python:
 - python
 
 Ruby:
+- mri
+- jruby
 - rubocop
+- reek
 
 C:
 - clang
 - gcc
+- clang-tidy
 
 C++:
 - clang++
 - g++
+- clang-tidy
 
 D:
 - dmd
 
 sh:
-- shellcheck
-
-zsh:
 - shellcheck
 
 Rust:
@@ -154,6 +160,9 @@ Puppet:
 
 Lua:
 - luacheck
+
+Standard ML:
+- smlnj
 
 Since this list may be out of date, look in [autoload/neomake/makers](https://github.com/benekastah/neomake/tree/master/autoload/neomake/makers) for all supported makers.
 
