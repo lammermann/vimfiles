@@ -15,7 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'othree/vim-autocomplpop'
 Plugin 'eparreno/vim-l9'
 Plugin 'chrisbra/NrrwRgn'
