@@ -1,9 +1,6 @@
 [submodule "snippets"]
 	path = UltiSnips
     url = git://github.com/lammermann/snipmate-snippets.git
-[submodule "bundle/CCTree"]
-	path = bundle/CCTree
-	url = git://github.com/vim-scripts/CCTree.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
