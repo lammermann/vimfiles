@@ -93,13 +93,15 @@ set encoding=utf-8
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 
-"use ESC to leave terminal mode
-tnoremap <C-Esc> <C-\><C-n>
-"navigate in terminal mode
-tnoremap <C-w>h <C-\><C-n><C-w>h
-tnoremap <C-w>j <C-\><C-n><C-w>j
-tnoremap <C-w>k <C-\><C-n><C-w>k
-tnoremap <C-w>l <C-\><C-n><C-w>l
+if has('nvim')
+  "use ESC to leave terminal mode
+  tnoremap <C-Esc> <C-\><C-n>
+  "navigate in terminal mode
+  tnoremap <C-w>h <C-\><C-n><C-w>h
+  tnoremap <C-w>j <C-\><C-n><C-w>j
+  tnoremap <C-w>k <C-\><C-n><C-w>k
+  tnoremap <C-w>l <C-\><C-n><C-w>l
+endif
 " }}}
 "===============================================================================
 " Plugin Configuration {{{
